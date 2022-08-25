@@ -62,6 +62,14 @@
       <param-value>My servlet three</param-value>
     </init-param>
   </servlet>
+  <servlet>
+    <servlet-name>s4</servlet-name>
+    <servlet-class>com.servletPractice.ServletOne</servlet-class>
+    <init-param>
+      <param-name>title</param-name>
+      <param-value>servlet one</param-value>
+    </init-param>
+  </servlet>
   <servlet-mapping>
     <servlet-name>s1</servlet-name>
     <url-pattern>/servletOne</url-pattern>
@@ -73,5 +81,9 @@
   <servlet-mapping>
     <servlet-name>s3</servlet-name>
     <url-pattern>/servletThree</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>s4</servlet-name>
+    <url-pattern>/servletFore</url-pattern>
   </servlet-mapping>
 </web-app>
