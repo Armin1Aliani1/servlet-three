@@ -1,6 +1,8 @@
 package com.servlet;
 
 import javax.servlet.*;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -39,6 +41,9 @@ public class MyServletTwo implements Servlet {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        Cookie[] cookies = ((HttpServletRequest) request).getCookies();
+
     }
 
     @Override

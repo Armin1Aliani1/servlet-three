@@ -10,6 +10,26 @@
     <param-value>Iran</param-value>
   </context-param>
 
+  <filter>
+    <filter-name>myFilter</filter-name>
+    <filter-class>com.servlet.MyFilter</filter-class>
+  </filter>
+
+  <filter>
+    <filter-name>myFilter2</filter-name>
+    <filter-class>com.servlet.MyFilterTwo</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>myFilter</filter-name>
+    <url-pattern>*.simple</url-pattern>
+  </filter-mapping>
+
+  <filter-mapping>
+    <filter-name>myFilter2</filter-name>
+    <url-pattern>/servletThreeeee</url-pattern>
+  </filter-mapping>
+
   <listener>
     <listener-class>com.servlet.MyAppAttributeListener</listener-class>
   </listener>
@@ -34,6 +54,14 @@
       <param-value>My servlet two</param-value>
     </init-param>
   </servlet>
+  <servlet>
+    <servlet-name>s3</servlet-name>
+    <servlet-class>com.servlet.MyServletThree</servlet-class>
+    <init-param>
+      <param-name>title</param-name>
+      <param-value>My servlet three</param-value>
+    </init-param>
+  </servlet>
   <servlet-mapping>
     <servlet-name>s1</servlet-name>
     <url-pattern>/servletOne</url-pattern>
@@ -41,5 +69,9 @@
   <servlet-mapping>
     <servlet-name>s2</servlet-name>
     <url-pattern>/servletTwo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>s3</servlet-name>
+    <url-pattern>/servletThree</url-pattern>
   </servlet-mapping>
 </web-app>
